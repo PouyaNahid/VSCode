@@ -1,0 +1,422 @@
+VSCode Extentions:
+	python.python						done
+	Pylance							done
+	Code Runner							done	
+	for team work: [stepsize codestream]
+	Tabnine 							done
+	autoDocstring - Python Docstring Generator
+	Python Indent						done
+	codesnap							no
+	Quick-Python-Print					done
+	Turbo Console Log						no
+	GitLense							done
+	Import Cost							done
+	Liveshare
+	Live Sever (Web developer)			
+	Material Icon Theme					done
+	dash								no
+	Dashboard							done
+	Better Comments						done (!?// TODO)
+	Trailing Spaces						done
+	Python Test Explorer					no
+	Code Time							done
+	Remote development					no
+	Todo Highlight						done
+	Todo Tree							no
+	Bookmarks							no		
+	Time Master							no
+	GitHub Pull Requests 					no
+	Robot Framework Language Server			done
+	robotcode							no (conflict with Robot Framework Language Server)
+	VSCode Dimmer						done (has video)
+	Git History							done
+
+
+Theme: CTRL + (K + T)
+	Browse:
+		Night owl black italic  -- ok
+		webstorm 
+		Night owl Night owl
+		cobalt2
+		shades of purple
+		shades of spring
+		coder coder dark
+		coderstackr theme
+		Andromeda Italic
+		Coffe (Dark and yellow)
+		Danity - Panda Theme
+		Dobri Next -B01
+		MaldosDVRK
+		One Dark Pro
+		Winter is comming (Dark black)
+		Atom One Dark
+		Dobri Next B01
+		White on Black
+		Palenight Operator
+
+
+Settings:
+
+	-Uncheck Enable Preview (open on click each file)
+	-Workbench -> Setting:Editor: UI or Json
+	-Column Selection must be ticked
+	-Default Folding Range Provider: Pylance
+	-Cursor Style: underline
+	-Mouse Wheel Zoom: Checked
+	-Word Wrap: ON
+	-Wrapping Indent: indent
+	-FOnt: Consolas, 'Courier New', monospace
+
+Shortcut:
+	CTRL + LEFT / RIGHT : 			Jump word by word instead cahr by char
+	ALT + UP / DOWN : 			Move line up and down
+	ALT + SHIFT + UP / DOWN : 		Duplicate a line up or down
+	CTRL + D on any word : 			Find other same word (we can also change the selected words)
+	ALT + CLICK : 				Select columns vertically
+	CTRL + L : 					Select active line
+	CTRL + SHIFT + k : 			Delete active line
+	CTRL + SHIFT + ENTER : 			Insert free line above current line and jump to it
+	CTRL + ENTER : 				Inset new line after current line and jump to it
+	CTRL + [ or CTRL + ] : 			Indentation to left or right
+	CTRL + G then enter line number: 	To jump to a specific line number
+	SHIFT + CLICK : 				Select text between cursor and new place indicated by shift and click
+
+----------------------------------------------------------------------------------------
+Scope inspector
+To activate scope inspector which is show object scope and format in vscode:
+
+VS Code's built-in scope inspector tool helps debug grammars and semantic tokens.
+It displays the scopes for the token and the semantic tokens at the current position in a file,
+along with metadata about which theme rules apply to that token.
+
+Trigger the scope inspector from the Command Palette with the Developer: 
+	Inspect Editor Tokens and Scopes command or create a keybinding for it:
+	https://code.visualstudio.com/docs/getstarted/keybindings
+{
+  "key": "cmd+alt+shift+i",
+  "command": "editor.action.inspectTMScopes"
+}
+
+--------------------------------------------------------------------------------------------
+my editor setting:
+
+{
+    "workbench.colorTheme": "One Dark Pro Darker - Mariana",
+    "tabnine.experimentalAutoImports": true,
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.defaultFoldingRangeProvider": "ms-python.vscode-pylance",
+    "editor.fontSize": 12,
+    "editor.cursorStyle": "underline",
+    "editor.mouseWheelZoom": true,
+    "editor.padding.bottom": 3,
+    "editor.padding.top": 2,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "editor.cursorBlinking": "phase",
+    "update.enableWindowsBackgroundUpdates": false,
+    "editor.accessibilitySupport": "on",
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            // "scope": [
+            //   "comment",
+            //   "comment.block.documentation",
+            //   "comment.block.documentation.js",
+            //   "comment.line.double-slash.js",
+            //   "storage.type.class.jsdoc",
+            //   "entity.name.type.instance.jsdoc",
+            //   "variable.other.jsdoc",
+            //   "punctuation.definition.comment",
+            //   "punctuation.definition.comment.begin.documentation",
+            //   "punctuation.definition.comment.end.documentation",
+            //   "variable.parameter.function.language.special.self.python",
+            //   "variable.language.special.self.python",
+            //   "keyword",
+            //   "support.class.builtin"
+            // ],
+            // "settings": {
+            //   "fontStyle": "italic",
+            //   "foreground": "#4b614b"
+            // },
+            {
+            "scope":
+                "comment",
+              "settings": {
+                "fontStyle": "italic",
+                "foreground": "#8272a0"
+              }
+            },
+            {
+              "scope":
+                "keyword.control",
+              "settings": {
+                "fontStyle": "italic",
+                "foreground": "#868f54"
+              }
+            },
+            {
+              "scope":
+                "keyword.control.flow.python",
+              "settings": {
+                "fontStyle": "italic",
+                "foreground": "#f180d5"
+              }
+            },
+            {
+              "scope":
+                "storage.type", //class, keyword definition
+              "settings": {
+                "fontStyle": "italic bold",
+                "foreground": "#d1e614"
+              }
+            },
+            {
+              "scope":
+              "variable.parameter.function.language.special.self.python", //self
+              "settings": {
+                "fontStyle": "italic",
+                "foreground": "#cb8cf0"
+              }
+            },
+            {
+              "scope":
+              "entity.name.variable", //
+              "settings": {
+                "fontStyle": "",
+                "foreground": "#aaa086"
+              }
+            },
+            {
+              "scope":
+              "string.quoted.single.python", // single quoted string
+              "settings": {
+                "fontStyle": "italic",
+                "foreground": "#91a03d"
+              }
+            },
+            {
+              "scope":
+              "entity.name.function.member", //
+              "settings": {
+                "fontStyle": "",
+                "foreground": "#5fb3b3"
+                // "foreground": "#6c9ea5"
+              }
+            },
+            {
+              "scope":
+              "entity.name.namespace", //
+              "settings": {
+                "fontStyle": "",
+                "foreground": "#c0c4c4"
+              }
+            },
+            {
+              "scope":
+              "entity.name.type.class", //
+              "settings": {
+                "fontStyle": "",
+                // "foreground": "#c0c4c4"
+                "foreground": "#eb8d64"
+              }
+            },
+            {
+              "scope":
+              "meta.attribute.python", //
+              "settings": {
+                "fontStyle": "",
+                // "foreground": "#f5ce79"
+                // "foreground": "#a58e34"
+                "foreground": "#cbbe6b"
+              }
+            },
+            {
+              "scope":
+              "variable.parameter", //
+              "settings": {
+                "fontStyle": "",
+                // "foreground": "#f5ce79"
+                // "foreground": "#a58e34"
+                "foreground": "#cbbe6b"
+              }
+            },
+
+          // For Robot FrameWork Setting
+            {
+              "scope": "variable.function.keyword-call.inner.robotframework",
+              "settings": {
+                  "fontStyle": "italic"
+              }
+          },
+          {
+              "scope": "variable.function.keyword-call.robotframework",
+              "settings": {
+                  //"fontStyle": "bold"
+              }
+          },
+          {
+              "scope": "string.unquoted.embeddedArgument.robotframework",
+              "settings": {
+                  "fontStyle": "italic"
+              }
+          },
+          {
+              "scope": "entity.name.function.testcase.name.robotframework",
+              "settings": {
+                  "fontStyle": "bold underline"
+              }
+          },
+          {
+              "scope": "entity.name.function.keyword.name.robotframework",
+              "settings": {
+                  "fontStyle": "bold italic"
+              }
+          },
+          {
+              "scope": "variable.other.readwrite.robotframework",
+              "settings": {
+                  //"fontStyle": "italic",
+              }
+          },
+          {
+              "scope": "keyword.control.import.robotframework",
+              "settings": {
+                  "fontStyle": "italic"
+              }
+          },
+          {
+              "scope": "keyword.other.header.setting.robotframework",
+              "settings": {
+                  "fontStyle": "bold underline"
+              }
+          },
+          {
+              "scope": "keyword.other.header.variable.robotframework",
+              "settings": {
+                  "fontStyle": "bold underline"
+              }
+          },
+          {
+              "scope": "keyword.other.header.testcase.robotframework",
+              "settings": {
+                  "fontStyle": "bold underline"
+              }
+          },
+          {
+              "scope": "keyword.other.header.keyword.robotframework",
+              "settings": {
+                  "fontStyle": "bold underline"
+              }
+          },
+          {
+              "scope": "keyword.other.header.setting.robotframework",
+              "settings": {
+                  "fontStyle": "bold underline"
+              }
+          },
+          {
+              "scope": "keyword.other.header.comment.robotframework",
+              "settings": {
+                  "fontStyle": "bold italic underline"
+              }
+          },
+          {
+              "scope": "constant.character.escape.robotframework",
+              "settings": {
+                  //"foreground": "#FF0000",
+              }
+          }
+        ]
+    },
+
+    // "editor.semanticTokenColorCustomizations": {
+    //     "[One Dark Pro Darker - Mariana]": {
+    //         "rules": {
+    //             "selfParameter": "#cb8cf0",
+    //             "clsParameter": "#65d656"
+    //         },
+    //     },
+    // },
+    "workbench.colorCustomizations": {
+    "[One Dark Pro Darker - Mariana]": {
+        "activityBar.background": "#221600",
+        "terminal.background":"#1D2021",
+        "terminal.foreground":"#A89984",
+        "terminalCursor.background":"#A89984",
+        "terminalCursor.foreground":"#A89984",
+        "terminal.ansiBlack":"#1D2021",
+        "terminal.ansiBlue":"#0D6678",
+        "terminal.ansiBrightBlack":"#665C54",
+        "terminal.ansiBrightBlue":"#0D6678",
+        "terminal.ansiBrightCyan":"#8BA59B",
+        "terminal.ansiBrightGreen":"#95C085",
+        "terminal.ansiBrightMagenta":"#8F4673",
+        "terminal.ansiBrightRed":"#FB543F",
+        "terminal.ansiBrightWhite":"#FDF4C1",
+        "terminal.ansiBrightYellow":"#FAC03B",
+        "terminal.ansiCyan":"#8BA59B",
+        "terminal.ansiGreen":"#95C085",
+        "terminal.ansiMagenta":"#8F4673",
+        "terminal.ansiRed":"#FB543F",
+        "terminal.ansiWhite":"#A89984",
+        "terminal.ansiYellow":"#FAC03B"
+          }
+    },
+
+
+    "todohighlight.isEnable": false,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        {
+            "text": "DEBUG:",
+            "color": "#34f7f7",
+            // "backgroundColor": "yellow",
+            // "overviewRulerColor": "grey"
+        },
+        {
+            "text": "REVIEW:",
+            "color": "#ff0000",
+            // "backgroundColor": "yellow",
+            // "overviewRulerColor": "grey"
+        },
+        {
+            "text": "NOTE:",
+            "color": "blue",
+            // "backgroundColor": "yellow",
+            // "overviewRulerColor": "grey"
+        },
+        {
+            "text": "HACK:",
+            "color": "green",
+            "isWholeLine": false,
+        },
+        {
+            "text": "TODO:",
+            "color": "red",
+            // "border": "1px solid red",
+            // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "rgba(0,0,0,.2)",
+            //other styling properties goes here ... 
+        }
+    ],
+    "todohighlight.keywordsPattern": "TODO:|FIXME:|HACK:|REVIE:|DEBUG:", //highlight `TODO:`,`FIXME:` or content between parentheses
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "editor.fontFamily": "Fira Code SemiBold, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontVariations": true,
+    "editor.codeLensFontFamily": "Fira Code SemiBold",
+    "editor.codeLensFontSize": 10,
+    "editor.fontWeight": "normal"
+}

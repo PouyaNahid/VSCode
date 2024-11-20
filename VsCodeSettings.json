@@ -72,7 +72,7 @@ Shortcut:
 	ALT + UP / DOWN : 			Move line up and down
 	ALT + SHIFT + UP / DOWN : 		Duplicate a line up or down
 	CTRL + D on any word : 			Find other same word (we can also change the selected words)
-	ALT + CLICK : 				Select columns vertically
+	ALT + CLICK : 				Select columns vertically (columnSelect)
 	CTRL + L : 					Select active line
 	CTRL + SHIFT + k : 			Delete active line
 	CTRL + SHIFT + ENTER : 			Insert free line above current line and jump to it

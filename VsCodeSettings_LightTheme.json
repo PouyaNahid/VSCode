@@ -19,9 +19,9 @@
     "editor.rulers": [80, 120],
     "workbench.colorCustomizations": {
       "editor.lineHighlightBackground": "#dbf7ff80",
-      "editor.wordHighlightBackground": "#fdc0d780",
+      "editor.wordHighlightBackground": "#fddeea80",
       "editorCursor.foreground": "#0f0e0e80",
-      "editor.selectionBackground": "#f9fd047c", //Currently SELECTED text
+      "editor.selectionBackground": "#fbfcc17c", //Currently SELECTED text
       "editor.selectionHighlightBackground": "#cac9c9c2", //Same content as selection
       "editor.findMatchBackground": "#00cc44a8", //Current SEARCH MATCH
       "editor.findMatchHighlightBackground": "#00ff0031" //Other SEARCH MATCHES
@@ -43,7 +43,7 @@
       {"scope": "constant.language.python", "settings": {"fontStyle": "bold", "foreground": "#c44e58"}}, 
       {"scope": "storage.type.string.python", "settings": {"fontStyle": "bold", "foreground": "#720455"}}, 
       {"scope": "storage.type.format.python", "settings": {"fontStyle": "", "foreground": "#b3000f"}}, 
-      {"scope": "variable.parameter.function.language.special.self.python", "settings": {"fontStyle": "italic bold", "foreground": "#9c65d6"}}, 
+      {"scope": "variable.parameter.function.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#9c65d6"}}, 
       // {"scope": "entity.name.variable", "settings": {"fontStyle": "", "foreground": "#00224D"}}, 
       // Class, Function
       // {"scope": "entity.name.type.class", "settings": {"fontStyle": "italic bold", "foreground": "#7F669D"}}, 
@@ -66,5 +66,11 @@
       // {"scope": "support.type.python", "settings": {"foreground": "#8250df"}},
     ]
   },
-  "editor.fontLigatures": false
+  "editor.fontLigatures": false,
+  "turboConsoleLog.logFunction": "print",
+  "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
+  "turboConsoleLog.includeFileNameAndLineNum": true,
+  "workbench.editor.enablePreview": false,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.saveFileBeforeRun": true
 }

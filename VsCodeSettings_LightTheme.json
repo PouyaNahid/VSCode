@@ -1,76 +1,205 @@
 {
-    "workbench.colorTheme": "Visual Studio Light", // Or another light theme you prefer
-    "tabnine.experimentalAutoImports": true,
-    "files.autoSave": "afterDelay",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "Fira Code",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "editor.defaultFoldingRangeProvider": "ms-python.vscode-pylance",
-    "editor.fontSize": 14, // Increased font size for better readability
-    "editor.cursorStyle": "underline",
-    "editor.mouseWheelZoom": true,
-    "editor.padding.bottom": 3,
-    "editor.padding.top": 2,
-    "editor.wordWrap": "on",
-    "editor.wrappingIndent": "indent",
-    "editor.cursorBlinking": "phase",
-    "update.enableWindowsBackgroundUpdates": false,
-    "editor.accessibilitySupport": "on",
-    "editor.rulers": [80, 120],
-    "workbench.colorCustomizations": {
-      "editor.lineHighlightBackground": "#dbf7ff80",
-      "editor.wordHighlightBackground": "#fddeea80",
-      "editorCursor.foreground": "#0f0e0e80",
-      "editor.selectionBackground": "#fbfcc17c", //Currently SELECTED text
-      "editor.selectionHighlightBackground": "#cac9c9c2", //Same content as selection
-      "editor.findMatchBackground": "#00cc44a8", //Current SEARCH MATCH
-      "editor.findMatchHighlightBackground": "#00ff0031" //Other SEARCH MATCHES
-    // "activityBar.background": "#00AA00"
-    },
-    "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      // Not clear
-      {"scope": "variable.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#be1447"}},
-      {"scope": "keyword.control", "settings": {"fontStyle": "italic", "foreground": "#007acc"}}, 
-      {"scope": "variable.other.python", "settings": {"fontStyle": "", "foreground": "#34926e"}}, 
-
-      // Done
-      {"scope": "keyword.operator", "settings": {"fontStyle": "", "foreground": "#e72b3a"}}, 
-      {"scope": "keyword.control.flow.python", "settings": {"fontStyle": "italic bold", "foreground": "#011ea1"}}, 
-      {"scope": "storage.type", "settings": {"fontStyle": "italic bold", "foreground": "#07bdc4"}}, 
-      // {"scope": "constant.numeric.hex.python", "settings": {"fontStyle": "bold", "foreground": "#c40750"}}, 
-      {"scope": "storage.type.number.python", "settings": {"fontStyle": "bold", "foreground": "#4e77c4"}}, 
-      {"scope": "constant.language.python", "settings": {"fontStyle": "bold", "foreground": "#c44e58"}}, 
-      {"scope": "storage.type.string.python", "settings": {"fontStyle": "bold", "foreground": "#720455"}}, 
-      {"scope": "storage.type.format.python", "settings": {"fontStyle": "", "foreground": "#b3000f"}}, 
-      {"scope": "variable.parameter.function.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#9c65d6"}}, 
-      // {"scope": "entity.name.variable", "settings": {"fontStyle": "", "foreground": "#00224D"}}, 
-      // Class, Function
-      // {"scope": "entity.name.type.class", "settings": {"fontStyle": "italic bold", "foreground": "#7F669D"}}, 
-      {"scope": "support.type.python", "settings": {"fontStyle": "", "foreground": "#7F669D"}}, 
-      {"scope": "meta.function-call.generic.python", "settings": {"fontStyle": "", "foreground": "#f56e00"}}, 
-      {"scope": "entity.name.function.python", "settings": {"fontStyle": "bold", "foreground": "#7743DB"}}, 
-      {"scope": "entity.name.namespace", "settings": {"fontStyle": "", "foreground": "#219999"}}, 
-      {"scope": "meta.attribute.python", "settings": {"fontStyle": "", "foreground": "#ce2121"}}, 
-      // Function param
-      {"scope": "variable.parameter.function.language.python", "settings": {"fontStyle": "", "foreground": "#be7f00"}},  // 03AED2 
-      {"scope": "meta.function-call.arguments.python", "settings": {"fontStyle": "", "foreground": "#018ba7"}},   // b88d02
-      {"scope": "punctuation.definition.arguments.end.python", "settings": {"fontStyle": "", "foreground": "#018ba7"}},   // b88d02
-      {"scope": "variable.parameter.function.python", "settings": {"fontStyle": "italic", "foreground": "#007acc"}}, 
-      {"scope": "variable.parameter.function-call.python", "settings": {"fontStyle": "", "foreground": "#daa002"}},   
-      // String, comment, Docstring
-      {"scope": "string.quoted.docstring.multi.python", "settings": {"fontStyle": "italic", "foreground": "#d7df04"}}, 
-      {"scope": "comment", "settings": {"fontStyle": "italic", "foreground": "#a4c481"}}, 
-      {"scope": "string.quoted.single.python", "settings": {"fontStyle": "", "foreground": "#017e27d3"}}, 
-      // Types like int, str, float
-      // {"scope": "support.type.python", "settings": {"foreground": "#8250df"}},
-    ]
+  "workbench.colorTheme": "Visual Studio Light", // Or another light theme you prefer
+  "tabnine.experimentalAutoImports": true,
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.associations": {
+    "venv": "environment",
+    "references": "docs",
+    "modeling": "generator"
   },
-  "editor.fontLigatures": false,
+  "editor.fontFamily": "Ubuntu Mono",
+    // Fira Code, DejaVu Sans Mono, Cascadia Mono , Roboto Mono, Consolas, Cascadia Code, Ubuntu Mono, Source Code Pro
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.defaultFoldingRangeProvider": "ms-python.vscode-pylance",
+  "editor.fontSize": 15, // Increased font size for better readability
+  "editor.cursorStyle": "block",
+  "editor.mouseWheelZoom": true,
+  "editor.padding.bottom": 3,
+  "editor.padding.top": 2,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "editor.cursorBlinking": "expand",
+  "update.enableWindowsBackgroundUpdates": false,
+  "editor.accessibilitySupport": "on",
+  "editor.rulers": [80, 120],
+  "editor.folding": false,
+  "editor.foldingStrategy": "indentation",
+  "editor.foldingImportsByDefault": true,
+  "[python]":
+  {
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+// --------------------------------------------------------------------------------------------------------------------
+// "workbench.colorCustomizations": {
+//   "editor.lineHighlightBackground": "#e8f5e980", // Soft Green
+//   "editor.wordHighlightBackground": "#ffecb380", // Pale Yellow
+//   "editorCursor.foreground": "#ff704380", // Soft Orange
+//   "editor.selectionBackground": "#c5e1a57c", // Light Green
+//   "editor.findMatchBackground": "#ffcc80a8", // Light Apricot
+//   "editor.findMatchHighlightBackground": "#a5d6a731" // Pale Lime
+// },
+// "editor.tokenColorCustomizations": {
+//   "textMateRules": [
+//     {"scope": "variable.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#2e7d32"}},
+//     {"scope": "keyword.control", "settings": {"fontStyle": "italic", "foreground": "#0277bd"}}, 
+//     {"scope": "variable.other.python", "settings": {"fontStyle": "", "foreground": "#388e3c"}}, 
+//     {"scope": "keyword.operator", "settings": {"fontStyle": "", "foreground": "#d84315"}}, 
+//     {"scope": "keyword.control.flow.python", "settings": {"fontStyle": "italic bold", "foreground": "#1a237e"}}, 
+//     {"scope": "storage.type", "settings": {"fontStyle": "italic bold", "foreground": "#00838f"}}, 
+//     {"scope": "storage.type.number.python", "settings": {"fontStyle": "bold", "foreground": "#3949ab"}}, 
+//     {"scope": "constant.language.python", "settings": {"fontStyle": "bold", "foreground": "#c62828"}}, 
+//     {"scope": "storage.type.string.python", "settings": {"fontStyle": "bold", "foreground": "#6a1b9a"}}, 
+//     {"scope": "storage.type.format.python", "settings": {"fontStyle": "", "foreground": "#c2185b"}}, 
+//     {"scope": "variable.parameter.function.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#512da8"}}, 
+//     {"scope": "support.type.python", "settings": {"fontStyle": "", "foreground": "#5e35b1"}}, 
+//     {"scope": "meta.function-call.generic.python", "settings": {"fontStyle": "", "foreground": "#ef6c00"}}, 
+//     {"scope": "entity.name.function.python", "settings": {"fontStyle": "bold", "foreground": "#283593"}}, 
+//     {"scope": "entity.name.namespace", "settings": {"fontStyle": "", "foreground": "#00796b"}}, 
+//     {"scope": "meta.attribute.python", "settings": {"fontStyle": "", "foreground": "#c62828"}}, 
+//     {"scope": "variable.parameter.function.language.python", "settings": {"fontStyle": "", "foreground": "#ff8f00"}},  
+//     {"scope": "meta.function-call.arguments.python", "settings": {"fontStyle": "", "foreground": "#0288d1"}},   
+//     {"scope": "punctuation.definition.arguments.end.python", "settings": {"fontStyle": "", "foreground": "#0288d1"}},   
+//     {"scope": "variable.parameter.function.python", "settings": {"fontStyle": "italic", "foreground": "#1976d2"}}, 
+//     {"scope": "variable.parameter.function-call.python", "settings": {"fontStyle": "", "foreground": "#fbc02d"}},   
+//     {"scope": "string.quoted.docstring.multi.python", "settings": {"fontStyle": "italic", "foreground": "#dadd2a"}}, 
+//     {"scope": "comment", "settings": {"fontStyle": "italic", "foreground": "#9e9e9e"}}, 
+//     {"scope": "string.quoted.single.python", "settings": {"fontStyle": "", "foreground": "#558b2f"}}
+//   ]
+// },
+//---------------------------------------------------------------------------------------------------------------------
+"workbench.colorCustomizations": {
+  "editor.lineHighlightBackground": "#dbf7ff80",
+  "editor.wordHighlightBackground": "#f8e59280",
+  "editorCursor.foreground": "#03ffff80",
+  "editor.selectionBackground": "#f7dff87c", //Currently SELECTED text
+ // "editor.selectionHighlightBackground": "#cac9c9c2", //Same content as selection
+  "editor.findMatchBackground": "#ff85a3a8", //Current SEARCH MATCH
+  "editor.findMatchHighlightBackground": "#00ff0031" //Other SEARCH MATCHES
+// "activityBar.background": "#00AA00"
+},
+"editor.tokenColorCustomizations": {
+"textMateRules": [
+  // Not clear
+  {"scope": "variable.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#be1447"}},
+  {"scope": "keyword.control", "settings": {"fontStyle": "italic", "foreground": "#007acc"}}, 
+  {"scope": "variable.other.python", "settings": {"fontStyle": "", "foreground": "#34926e"}}, 
+
+  // Done
+  {"scope": "keyword.operator", "settings": {"fontStyle": "", "foreground": "#e72b3a"}}, 
+  {"scope": "keyword.control.flow.python", "settings": {"fontStyle": "italic bold", "foreground": "#011ea1"}}, 
+  {"scope": "storage.type", "settings": {"fontStyle": "italic bold", "foreground": "#07bdc4"}}, 
+  // {"scope": "constant.numeric.hex.python", "settings": {"fontStyle": "bold", "foreground": "#c40750"}}, 
+  {"scope": "storage.type.number.python", "settings": {"fontStyle": "bold", "foreground": "#4e77c4"}}, 
+  {"scope": "constant.language.python", "settings": {"fontStyle": "bold", "foreground": "#c44e58"}}, 
+  {"scope": "storage.type.string.python", "settings": {"fontStyle": "bold", "foreground": "#720455"}}, 
+  {"scope": "storage.type.format.python", "settings": {"fontStyle": "", "foreground": "#b3000f"}}, 
+  {"scope": "variable.parameter.function.language.special.self.python", "settings": {"fontStyle": "italic", "foreground": "#9c65d6"}}, 
+  // {"scope": "entity.name.variable", "settings": {"fontStyle": "", "foreground": "#00224D"}}, 
+  // Class, Function
+  {"scope": "entity.name.type.class", "settings": {"fontStyle": "italic", "foreground": "#512da8"}},  // int, bool
+  // {"scope": "entity.name.type.class", "settings": {"fontStyle": "", "foreground": "#7F669D"}}, 
+  {"scope": "meta.function-call.generic.python", "settings": {"fontStyle": "", "foreground": "#ef6c00"}}, 
+  {"scope": "entity.name.function.python", "settings": {"fontStyle": "italic bold", "foreground": "#7F669D"}}, 
+  {"scope": "entity.name.namespace", "settings": {"fontStyle": "", "foreground": "#219999"}}, 
+  {"scope": "meta.attribute.python", "settings": {"fontStyle": "", "foreground": "#ce2121"}}, 
+  // Function param
+  {"scope": "variable.parameter.function.language.python", "settings": {"fontStyle": "", "foreground": "#ff8f00"}},  // 03AED2 
+  {"scope": "meta.function-call.arguments.python", "settings": {"fontStyle": "", "foreground": "#0288d1"}},   // 018ba7, b88d02
+  {"scope": "punctuation.definition.arguments.end.python", "settings": {"fontStyle": "", "foreground": "#018ba7"}},   // b88d02
+  {"scope": "variable.parameter.function.python", "settings": {"fontStyle": "italic", "foreground": "#007acc"}}, 
+  {"scope": "variable.parameter.function-call.python", "settings": {"fontStyle": "", "foreground": "#fbc02d"}},   
+  // String, comment, Docstring
+  {"scope": "string.quoted.docstring.multi.python", "settings": {"fontStyle": "italic", "foreground": "#afb42b"}}, 
+  {"scope": "comment", "settings": {"fontStyle": "italic", "foreground": "#9e9e9e"}}, 
+  {"scope": "string.quoted.single.python", "settings": {"fontStyle": "", "foreground": "#02791fd3"}}, 
+  // Types like int, str, float
+  // {"scope": "support.type.python", "settings": {"foreground": "#8250df"}},
+  {"scope": "keyword.operator.assignment.python", "settings": {"foreground": "#57565a"}},
+  {"scope": "keyword.operator.assignment.python", "settings": {"foreground": "#c9031e"}},
+]
+},
+  "editor.fontLigatures": true,
   "turboConsoleLog.logFunction": "print",
   "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
   "turboConsoleLog.includeFileNameAndLineNum": true,
   "workbench.editor.enablePreview": false,
   "code-runner.clearPreviousOutput": true,
-  "code-runner.saveFileBeforeRun": true
+  "code-runner.saveFileBeforeRun": true,
+  "remote.SSH.remotePlatform": {
+    "pnahid_home": "linux",
+    "19.221.12.110": "linux"
+  },
+  "window.customTitleBarVisibility": "auto",
+  "editor.codeActionsOnSave": {
+
+  },
+  "autofold.fold_regex": "^\\s*\"\"\"|^\\s*'''",
+  "autofold.more_fold_regexes": [
+
+  ],
+  "editor.foldingMaximumRegions": 50000,
+  "editor.smoothScrolling": true,
+  "editor.guides.bracketPairs": "active",
+  "better-comments.tags": [
+
+  {
+    "tag": "TODO",
+    "color": "#EA580C",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "#000000",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "FIXME",
+    "color": "#c9031e",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "#FFFFFF",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "HACK",
+    "color": "#474747",
+    "strikethrough": true,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "IDEA",
+    "color": "#FF8C00",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "INFO",
+    "color": "#0EA5E9",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "NOTE",
+    "color": "#2563EB",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  }
+],
+"better-comments.highlightPlainText": false,
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "charliermarsh.ruff"
 }

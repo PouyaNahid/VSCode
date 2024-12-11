@@ -35,6 +35,10 @@ VSCode Extentions:
 	robotcode							no (conflict with Robot Framework Language Server)
 	VSCode Dimmer						done (has video)
 	Git History							done
+	Path Intellisense					done
+	Ruff							done
+	SonarQube for IDE					done
+	Regex Snippets						done
 
 
 Theme: CTRL + (K + T)

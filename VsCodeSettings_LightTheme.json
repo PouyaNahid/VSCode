@@ -11,20 +11,19 @@
   "editor.fontFamily": "Ubuntu Mono",
     // Fira Code, DejaVu Sans Mono, Cascadia Mono , Roboto Mono, Consolas, Cascadia Code, Ubuntu Mono, Source Code Pro
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.defaultFoldingRangeProvider": "ms-python.vscode-pylance",
-  "editor.fontSize": 15, // Increased font size for better readability
-  "editor.cursorStyle": "block",
+  "editor.defaultFoldingRangeProvider": "ms-python.vscode-pylance", // Increased font size for better readability
+  "editor.cursorStyle": "underline",
   "editor.mouseWheelZoom": true,
   "editor.padding.bottom": 3,
   "editor.padding.top": 2,
   "editor.wordWrap": "on",
   "editor.wrappingIndent": "indent",
-  "editor.cursorBlinking": "expand",
   "update.enableWindowsBackgroundUpdates": false,
   "editor.accessibilitySupport": "on",
-  "editor.rulers": [80, 120],
-  "editor.folding": false,
-  "editor.foldingStrategy": "indentation",
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.foldingImportsByDefault": true,
   "[python]":
   {
@@ -70,10 +69,11 @@
 // },
 //---------------------------------------------------------------------------------------------------------------------
 "workbench.colorCustomizations": {
+  "editor.background":"#f5f3ea",
   "editor.lineHighlightBackground": "#dbf7ff80",
-  "editor.wordHighlightBackground": "#f8e59280",
-  "editorCursor.foreground": "#03ffff80",
-  "editor.selectionBackground": "#f7dff87c", //Currently SELECTED text
+  "editor.wordHighlightBackground": "#f2f3c17c",
+  "editorCursor.foreground": "#1204daec",
+  // "editor.selectionBackground": "#f6b2f87c", //Currently SELECTED text
  // "editor.selectionHighlightBackground": "#cac9c9c2", //Same content as selection
   "editor.findMatchBackground": "#ff85a3a8", //Current SEARCH MATCH
   "editor.findMatchHighlightBackground": "#00ff0031" //Other SEARCH MATCHES
@@ -107,11 +107,13 @@
   // Function param
   {"scope": "variable.parameter.function.language.python", "settings": {"fontStyle": "", "foreground": "#ff8f00"}},  // 03AED2 
   {"scope": "meta.function-call.arguments.python", "settings": {"fontStyle": "", "foreground": "#0288d1"}},   // 018ba7, b88d02
+  {"scope": "support.function.builtin.python", "settings": {"fontStyle": "", "foreground": "#878a00"}},   // 018ba7, b88d02
   {"scope": "punctuation.definition.arguments.end.python", "settings": {"fontStyle": "", "foreground": "#018ba7"}},   // b88d02
   {"scope": "variable.parameter.function.python", "settings": {"fontStyle": "italic", "foreground": "#007acc"}}, 
-  {"scope": "variable.parameter.function-call.python", "settings": {"fontStyle": "", "foreground": "#fbc02d"}},   
+  {"scope": "variable.parameter.function-call.python", "settings": {"fontStyle": "", "foreground": "#eba800"}},   
   // String, comment, Docstring
-  {"scope": "string.quoted.docstring.multi.python", "settings": {"fontStyle": "italic", "foreground": "#afb42b"}}, 
+  {"scope": "string.quoted.docstring.multi.python", "settings": {"fontStyle": "italic", "foreground": "#d2d830"}}, 
+  {"scope": "string.quoted.docstring.multi.python", "settings": {"fontStyle": "italic", "foreground": "#949494"}}, 
   {"scope": "comment", "settings": {"fontStyle": "italic", "foreground": "#9e9e9e"}}, 
   {"scope": "string.quoted.single.python", "settings": {"fontStyle": "", "foreground": "#02791fd3"}}, 
   // Types like int, str, float
@@ -139,7 +141,7 @@
   "autofold.more_fold_regexes": [
 
   ],
-  "editor.foldingMaximumRegions": 50000,
+  "editor.foldingMaximumRegions": 65000,
   "editor.smoothScrolling": true,
   "editor.guides.bracketPairs": "active",
   "better-comments.tags": [
@@ -201,5 +203,22 @@
 ],
 "better-comments.highlightPlainText": false,
 "editor.formatOnSave": true,
-"editor.defaultFormatter": "charliermarsh.ruff"
+"editor.defaultFormatter": "charliermarsh.ruff",
+"html.format.contentUnformatted": "",
+"jupyter.interactiveWindow.textEditor.executeSelection": true,
+"editor.unfoldOnClickAfterEndOfLine": true,
+"editor.cursorSurroundingLines": 1,
+"terminal.integrated.cursorStyle": "underline",
+"terminal.integrated.cursorStyleInactive": "underline",
+"terminal.integrated.fontFamily": "monospace",
+"terminal.integrated.scrollback": 1000000,
+"workbench.editorAssociations": {
+  "*.xlsx": "gc-excelviewer-excel-editor"
+},
+"terminal.integrated.mouseWheelZoom": true,
+"editor.fontSize": 16,
+"editor.scrollbar.horizontalScrollbarSize": 3,
+"editor.minimap.enabled": false,
+"terminal.integrated.fontSize": 12,
+"terminal.integrated.fontWeight": "normal"
 }

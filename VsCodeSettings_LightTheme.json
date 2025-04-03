@@ -61,9 +61,11 @@
   "terminal.integrated.cursorStyleInactive": "underline",
   "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.scrollback": 1000000,
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "/home/pnahid/Projects/diagnostics/scripts:/home/pnahid/Projects/diagnostics/tests:${env:PYTHONPATH}"
+  },
   "editor.scrollbar.horizontalScrollbarSize": 3,
   "editor.minimap.enabled": false,
-
 
   "material-icon-theme.folders.associations": {
     "venv": "environment",
@@ -145,6 +147,4 @@
       {"scope": "keyword.operator.assignment.python", "settings": {"foreground": "#c9031e"}}
     ]
   }
-
-
 }

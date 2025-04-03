@@ -1,30 +1,45 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    // This file I created for Run Slash test runner with vscode dubugger
-    "version": "0.2.0",
-    "configurations": 
-    [
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": 
+  [
     {
-        "name": "Slash Debug",
-        "type": "python",
-        "request": "launch",
-        "program": "/home/pnahid/Projects/diagnostics/venv/bin/slash",
-        "args": [
-        "run", "-vvv",
-        "-o", "config.Windows.hostname=10.1.0.100",
-        "-o", "general.env=WrLinux",
-        "-o", "config.WrLinux.is_virtual=False",
-        "-o", "config.WrLinux.ssh_key_path=/home/pnahid/.ssh/id_ecg_ecdsa",
-        "-o", "config.WR_PythonBinding.tools.rpyc.archive_path=/home/pnahid/Projects/builds/rpyc_dep.tar",
-        "-o", "config.Canoe.skip_startup=True",
-        "-o", "general.host_machine_config=/home/pnahid/jenkins_caas/host_config.toml",
-        "-o", "general.dlt_logger.collect=NETN",
-        "${file}"
-      ],
-        "console": "integratedTerminal",
-        "justMyCode": false
+      "name": "Slash Debug",
+      "type": "python",
+      "request": "launch",
+      "program": "/home/pnahid/Projects/diagnostics/venv/bin/slash",
+      "args": [
+      "run", "-vvv",
+      "-o", "config.Windows.hostname=10.1.0.100",
+      "-o", "general.env=WrLinux",
+      "-o", "config.WrLinux.is_virtual=False",
+      "-o", "config.WrLinux.ssh_key_path=/home/pnahid/.ssh/id_ecg_ecdsa",
+      "-o", "config.WR_PythonBinding.tools.rpyc.archive_path=/home/pnahid/Projects/builds/rpyc_dep.tar",
+      "-o", "config.Canoe.skip_startup=True",
+      "-o", "general.host_machine_config=/home/pnahid/jenkins_caas/host_config.toml",
+      "-o", "general.dlt_logger.collect=NETN",
+      "${file}"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Python: Current File", // Or a more specific name
+      "type": "python",
+      "request": "launch",
+      "program": "${file}", // Runs the currently open file
+      "console": "integratedTerminal",
+      "justMyCode": true, // Or false if you need to debug into libraries
+      // --- Add/Modify these lines ---
+      "cwd": "${workspaceFolder}", // Sets CWD to the root of your opened folder/workspace
+      "env": {  // Add BOTH missing paths to PYTHONPATH
+                // Use ':' for Linux/macOS, ';' for Windows
+                // Adjust the path separator if your OS differs
+                "PYTHONPATH": "${workspaceFolder}/scripts:${workspaceFolder}/tests:${env:PYTHONPATH}"
+                // For Windows, it would be:
+                // "PYTHONPATH": "${workspaceFolder}\\scripts;${workspaceFolder}\\tests;${env:PYTHONPATH}"
+              }
     }
-    ]
+  ]
 }
